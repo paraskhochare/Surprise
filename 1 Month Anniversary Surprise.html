@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1 Month Anniversary ❤️</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            800: '#9f1239',
+                            900: '#881337',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom 3D Flip Card Styles */
+        .perspective {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .card-flipped .transform-style-3d {
+            transform: rotateY(180deg);
+        }
+
+        /* Floating Hearts Animation */
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.6;
+            }
+            80% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-15vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        .floating-heart {
+            position: fixed;
+            bottom: -10vh;
+            pointer-events: none;
+            z-index: 0;
+            animation: floatUp linear infinite;
+        }
+
+        /* Pulse Glow Effect */
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(244, 63, 94, 0.4), 0 0 30px rgba(244, 63, 94, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(244, 63, 94, 0.7), 0 0 45px rgba(244, 63, 94, 0.4);
+            }
+        }
+        .glow-btn {
+            animation: pulseGlow 2.5s infinite;
+        }
+
+        /* Coupon Perforation Effect */
+        .coupon-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .coupon-card::before, .coupon-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 24px;
+            height: 24px;
+            background-color: #fff1f2;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+        .coupon-card::before {
+            left: -12px;
+            box-shadow: inset -2px 0 3px rgba(0,0,0,0.05);
+        }
+        .coupon-card::after {
+            right: -12px;
+            box-shadow: inset 2px 0 3px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-rose-50 via-pink-50 to-rose-100 text-slate-800 antialiased selection:bg-rose-300 selection:text-rose-900 overflow-x-hidden min-h-screen relative">
+
+    <!-- Background Floating Hearts Container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none overflow-hidden z-0"></div>
+
+    <!-- Navigation Pill -->
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-white/80 backdrop-blur-md px-5 py-2.5 rounded-full shadow-md border border-rose-200/60 flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-rose-800 w-max max-w-[92vw] overflow-x-auto">
+        <a href="#hero" class="hover:text-rose-500 transition whitespace-nowrap"><i class="fa-solid fa-heart text-rose-500 mr-1"></i>Top</a>
+        <a href="#story" class="hover:text-rose-500 transition whitespace-nowrap">Our Story</a>
+        <a href="#reasons" class="hover:text-rose-500 transition whitespace-nowrap">Why You</a>
+        <a href="#promises" class="hover:text-rose-500 transition whitespace-nowrap">Promises</a>
+        <a href="#booster" class="hover:text-rose-500 transition whitespace-nowrap">Mood Booster</a>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 pt-20 pb-12 text-center">
+        <div class="bg-white/75 backdrop-blur-lg p-8 sm:p-12 rounded-3xl shadow-xl border border-white max-w-2xl w-full transform transition duration-500 hover:shadow-2xl">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-100 border border-rose-200 text-rose-700 text-xs sm:text-sm font-semibold mb-6">
+                <i class="fa-solid fa-calendar-check text-rose-500"></i>
+                <span>16th Oct &mdash; 16th Nov</span>
+            </div>
+            
+            <h1 class="font-serif text-4xl sm:text-6xl font-bold text-rose-900 leading-tight mb-4">
+                Happy 1 Month Anniversary
+            </h1>
+            
+            <p class="font-serif italic text-lg sm:text-xl text-rose-600 mb-6">
+                "Just like I texted you... I didn't want my reply to stop at just a message, so I built this little corner of the internet just for you."
+            </p>
+            
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                Thank you for that beautiful letter you wrote for me. I know this first month was a total rollercoaster with its crazy ups and downs, but my love for you hasn't changed a single bit since day one. Let's leave all the past fights behind and live in the present with the best memories.
+            </p>
+
+            <!-- Live Relationship Counter -->
+            <div class="bg-rose-50/90 border border-rose-200 rounded-2xl p-4 mb-8 shadow-inner">
+                <p class="text-xs uppercase tracking-widest text-rose-500 font-semibold mb-2">Loving You Since That Movie Night (16th Oct)</p>
+                <div id="time-counter" class="grid grid-cols-4 gap-2 max-w-md mx-auto text-rose-900 font-bold">
+                    <div class="bg-white p-2 rounded-xl shadow-sm">
+                        <span id="days" class="text-xl sm:text-2xl block text-rose-600">31</span>
+                        <span class="text-[10px] sm:text-xs font-normal text-slate-500">Days</span>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl shadow-sm">
+                        <span id="hours" class="text-xl sm:text-2xl block text-rose-600">00</span>
+                        <span class="text-[10px] sm:text-xs font-normal text-slate-500">Hours</span>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl shadow-sm">
+                        <span id="minutes" class="text-xl sm:text-2xl block text-rose-600">00</span>
+                        <span class="text-[10px] sm:text-xs font-normal text-slate-500">Mins</span>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl shadow-sm">
+                        <span id="seconds" class="text-xl sm:text-2xl block text-rose-600">00</span>
+                        <span class="text-[10px] sm:text-xs font-normal text-slate-500">Secs</span>
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="openSurprise()" class="glow-btn bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transform transition active:scale-95 flex items-center justify-center gap-3 mx-auto text-base sm:text-lg cursor-pointer">
+                <i class="fa-solid fa-gift animate-bounce"></i>
+                <span>Open Your Surprise</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. OUR STORY TIMELINE -->
+    <section id="story" class="relative z-10 py-16 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-14">
+            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 bg-rose-100 px-3 py-1 rounded-full">Chapter One</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-rose-900 mt-3">How It All Started</h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">Every little moment that made you my favourite person.</p>
+        </div>
+
+        <!-- Timeline Wrapper -->
+        <div class="relative border-l-4 border-rose-300 ml-4 sm:ml-1/2 sm:translate-x-0 space-y-10 pl-6 sm:pl-0">
+            
+            <!-- Item 1: Snapchat -->
+            <div class="relative sm:w-1/2 sm:pr-10 sm:ml-0 group">
+                <div class="absolute -left-[38px] sm:left-auto sm:-right-[18px] top-4 w-8 h-8 bg-yellow-400 text-slate-900 rounded-full flex items-center justify-center shadow-md border-4 border-white z-10">
+                    <i class="fa-brands fa-snapchat text-sm"></i>
+                </div>
+                <div class="bg-white/85 backdrop-blur-md p-6 rounded-2xl shadow-md border border-rose-100 hover:shadow-xl transition">
+                    <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-200">The Beginning</span>
+                    <h3 class="font-serif text-xl font-bold text-rose-900 mt-2">Found on Snapchat</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        You found my ID and added me, not knowing what would happen next. Neither of us had any idea that one random add on Snap would turn you into my absolute favourite person in the world.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 2: Friday 16th Oct -->
+            <div class="relative sm:w-1/2 sm:pl-10 sm:ml-auto group">
+                <div class="absolute -left-[38px] sm:-left-[18px] top-4 w-8 h-8 bg-rose-500 text-white rounded-full flex items-center justify-center shadow-md border-4 border-white z-10">
+                    <i class="fa-solid fa-heart text-xs"></i>
+                </div>
+                <div class="bg-white/85 backdrop-blur-md p-6 rounded-2xl shadow-md border border-rose-100 hover:shadow-xl transition">
+                    <span class="text-xs font-bold text-rose-600 bg-rose-50 px-2.5 py-1 rounded-md border border-rose-200">Friday, 16th October</span>
+                    <h3 class="font-serif text-xl font-bold text-rose-900 mt-2">Movie Night, Truth & Dare & "Yes!"</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                        You texted me while I was returning from the movie (and hey, you never have to feel jealous of anyone, my eyes are only on you!). That night we played Truth & Dare, had so much fun, and when you proposed to me... I said <strong>YES!</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Item 3: Special Moments -->
+            <div class="relative sm:w-1/2 sm:pr-10 sm:ml-0 group">
+                <div class="absolute -left-[38px] sm:left-auto sm:-right-[18px] top-4 w-8 h-8 bg-pink-500 text-white rounded-full flex items-center justify-center shadow-md border-4 border-white z-10">
+                    <i class="fa-solid fa-video text-xs"></i>
+                </div>
+                <div class="bg-white/85 backdrop-blur-md p-6 rounded-2xl shadow-md border border-rose-100 hover:shadow-xl transition">
+                    <span class="text-xs font-bold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-md border border-pink-200">Our Best Memories</span>
+                    <h3 class="font-serif text-xl font-bold text-rose-900 mt-2">Blushing VCs, Meds & Exam Voice Notes</h3>
+                    <ul class="text-slate-600 text-sm mt-3 space-y-2">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-face-flushed text-rose-400 mt-1"></i>
+                            <span>Our video calls that made us both blush like crazy (especially you!).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-pills text-rose-400 mt-1"></i>
+                            <span>The day I had to lovingly blackmail you just to make sure you ate your medicines.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-microphone-lines text-rose-400 mt-1"></i>
+                            <span>Sending you my tired voice notes right after my English paper telling you how much I wrote.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-house-chimney-heart text-rose-400 mt-1"></i>
+                            <span>Talking and planning how you will tell your dad about us one day.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Item 4: 16th Nov & Beyond -->
+            <div class="relative sm:w-1/2 sm:pl-10 sm:ml-auto group">
+                <div class="absolute -left-[38px] sm:-left-[18px] top-4 w-8 h-8 bg-rose-600 text-white rounded-full flex items-center justify-center shadow-md border-4 border-white z-10">
+                    <i class="fa-solid fa-infinity text-xs"></i>
+                </div>
+                <div class="bg-gradient-to-br from-rose-500 to-pink-600 p-6 rounded-2xl shadow-lg text-white">
+                    <span class="text-xs font-bold bg-white/20 px-2.5 py-1 rounded-md">16th November &mdash; Present</span>
+                    <h3 class="font-serif text-xl font-bold mt-2">A Fresh Start Together</h3>
+                    <p class="text-rose-50 text-sm mt-2 leading-relaxed">
+                        We survived our misunderstandings and rough patches. Thank you for giving us another chance. No more looking back—just making beautiful memories together right now.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. INTERACTIVE "REASONS WHY I CHOSE YOU" FLIP CARDS -->
+    <section id="reasons" class="relative z-10 py-16 px-4 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 bg-rose-100 px-3 py-1 rounded-full">Tap Any Card To Flip</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-rose-900 mt-3">Why I Chose You</h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">In your letter you asked why I chose you... tap each card below for your answer.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Flip Card 1: Beauty -->
+            <div class="perspective h-80 cursor-pointer" onclick="this.classList.toggle('card-flipped')">
+                <div class="transform-style-3d relative w-full h-full rounded-3xl shadow-lg">
+                    <!-- Front -->
+                    <div class="backface-hidden absolute inset-0 bg-white/90 backdrop-blur-md border-2 border-rose-200 rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:border-rose-400 transition">
+                        <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-500 flex items-center justify-center text-3xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-sparkles"></i>
+                        </div>
+                        <span class="text-xs uppercase font-bold tracking-wider text-rose-400 mb-1">Reason #1</span>
+                        <h3 class="font-serif text-2xl font-bold text-rose-900 mb-3">Why Did I Choose You?</h3>
+                        <p class="text-xs text-slate-400 mt-auto flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-full">
+                            <i class="fa-solid fa-hand-pointer text-rose-400"></i> Tap to reveal
+                        </p>
+                    </div>
+                    <!-- Back -->
+                    <div class="backface-hidden rotate-y-180 absolute inset-0 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-3xl p-7 flex flex-col items-center justify-center text-center shadow-xl">
+                        <i class="fa-solid fa-crown text-2xl text-rose-200 mb-3"></i>
+                        <h4 class="font-serif text-xl font-bold mb-2">You Are So Beautiful</h4>
+                        <p class="text-sm text-rose-50 leading-relaxed">
+                            Please <strong>never</strong> call yourself ugly ever again. To me, you are the prettiest girl inside and out. The way you care for me and love me makes you glow, and that is why I chose you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 2: Safe Space -->
+            <div class="perspective h-80 cursor-pointer" onclick="this.classList.toggle('card-flipped')">
+                <div class="transform-style-3d relative w-full h-full rounded-3xl shadow-lg">
+                    <!-- Front -->
+                    <div class="backface-hidden absolute inset-0 bg-white/90 backdrop-blur-md border-2 border-rose-200 rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:border-rose-400 transition">
+                        <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-500 flex items-center justify-center text-3xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </div>
+                        <span class="text-xs uppercase font-bold tracking-wider text-rose-400 mb-1">Reason #2</span>
+                        <h3 class="font-serif text-2xl font-bold text-rose-900 mb-3">Our Secret Safe Space</h3>
+                        <p class="text-xs text-slate-400 mt-auto flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-full">
+                            <i class="fa-solid fa-hand-pointer text-rose-400"></i> Tap to reveal
+                        </p>
+                    </div>
+                    <!-- Back -->
+                    <div class="backface-hidden rotate-y-180 absolute inset-0 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-3xl p-7 flex flex-col items-center justify-center text-center shadow-xl">
+                        <i class="fa-solid fa-comments text-2xl text-rose-200 mb-3"></i>
+                        <h4 class="font-serif text-xl font-bold mb-2">We Share Everything</h4>
+                        <p class="text-sm text-rose-50 leading-relaxed">
+                            With you, I can share every single thing that is personal or bothering me, and you tell me everything happening in your life too. Writing big paragraphs for you feels natural because you truly listen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 3: Never Giving Up -->
+            <div class="perspective h-80 cursor-pointer" onclick="this.classList.toggle('card-flipped')">
+                <div class="transform-style-3d relative w-full h-full rounded-3xl shadow-lg">
+                    <!-- Front -->
+                    <div class="backface-hidden absolute inset-0 bg-white/90 backdrop-blur-md border-2 border-rose-200 rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:border-rose-400 transition">
+                        <div class="w-16 h-16 rounded-2xl bg-rose-100 text-rose-500 flex items-center justify-center text-3xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="text-xs uppercase font-bold tracking-wider text-rose-400 mb-1">Reason #3</span>
+                        <h3 class="font-serif text-2xl font-bold text-rose-900 mb-3">How Hard You Fight For Us</h3>
+                        <p class="text-xs text-slate-400 mt-auto flex items-center gap-1.5 bg-slate-100 px-3 py-1.5 rounded-full">
+                            <i class="fa-solid fa-hand-pointer text-rose-400"></i> Tap to reveal
+                        </p>
+                    </div>
+                    <!-- Back -->
+                    <div class="backface-hidden rotate-y-180 absolute inset-0 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-3xl p-7 flex flex-col items-center justify-center text-center shadow-xl">
+                        <i class="fa-solid fa-shield-heart text-2xl text-rose-200 mb-3"></i>
+                        <h4 class="font-serif text-xl font-bold mb-2">Your Pure Heart</h4>
+                        <p class="text-sm text-rose-50 leading-relaxed">
+                            Even when I lost my temper and brought up breaking up, you held onto us and gave me another chance. Seeing how deeply you love me outside of your mom & dad makes me want to protect your heart forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. MY PROMISES TO YOU (LOVE COUPONS) -->
+    <section id="promises" class="relative z-10 py-16 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-xs font-bold uppercase tracking-widest text-rose-500 bg-rose-100 px-3 py-1 rounded-full">Lifetime Vouchers</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-rose-900 mt-3">My Promises To You</h2>
+            <p class="text-slate-600 mt-2 text-sm sm:text-base">Click on any promise below to officially claim and lock it in forever.</p>
+        </div>
+
+        <div class="space-y-5">
+            
+            <!-- Coupon 1: Chef -->
+            <div onclick="claimPromise(this, 'Your Personal Chef Forever')" class="coupon-card bg-white/90 backdrop-blur-md border-2 border-dashed border-rose-300 rounded-2xl p-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md hover:shadow-lg transition cursor-pointer group">
+                <div class="flex items-start sm:items-center gap-4 text-center sm:text-left flex-col sm:flex-row w-full">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl shrink-0 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-rose-500">Promise Coupon #01</span>
+                        <h3 class="font-serif text-xl font-bold text-rose-900">Your Personal Future Chef</h3>
+                        <p class="text-slate-600 text-sm mt-1">Since you said I'm a nice chef, you never have to worry about our future meals. I'll always cook your favourite food for you!</p>
+                    </div>
+                </div>
+                <button class="claim-btn shrink-0 bg-rose-100 group-hover:bg-rose-500 group-hover:text-white text-rose-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition flex items-center gap-2">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Claim Promise</span>
+                </button>
+            </div>
+
+            <!-- Coupon 2: Medicines -->
+            <div onclick="claimPromise(this, 'Medicine & Health Guardian')" class="coupon-card bg-white/90 backdrop-blur-md border-2 border-dashed border-rose-300 rounded-2xl p-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md hover:shadow-lg transition cursor-pointer group">
+                <div class="flex items-start sm:items-center gap-4 text-center sm:text-left flex-col sm:flex-row w-full">
+                    <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shrink-0 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-Notes-medical fa-kit-medical"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-rose-500">Promise Coupon #02</span>
+                        <h3 class="font-serif text-xl font-bold text-rose-900">Medicine & Health Reminder</h3>
+                        <p class="text-slate-600 text-sm mt-1">I promise to always take care of you and lovingly "blackmail" you whenever needed so you never skip your medicines.</p>
+                    </div>
+                </div>
+                <button class="claim-btn shrink-0 bg-rose-100 group-hover:bg-rose-500 group-hover:text-white text-rose-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition flex items-center gap-2">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Claim Promise</span>
+                </button>
+            </div>
+
+            <!-- Coupon 3: No More Breakups -->
+            <div onclick="claimPromise(this, 'No More Silly Breakups')" class="coupon-card bg-white/90 backdrop-blur-md border-2 border-dashed border-rose-300 rounded-2xl p-6 sm:px-10 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md hover:shadow-lg transition cursor-pointer group">
+                <div class="flex items-start sm:items-center gap-4 text-center sm:text-left flex-col sm:flex-row w-full">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl shrink-0 mx-auto sm:mx-0">
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-rose-500">Promise Coupon #03</span>
+                        <h3 class="font-serif text-xl font-bold text-rose-900">Patience, Peace & Staying Together</h3>
+                        <p class="text-slate-600 text-sm mt-1">No more losing my temper and saying "let's break up" when I'm angry. We talk it out, stay together, and build happy memories in the present.</p>
+                    </div>
+                </div>
+                <button class="claim-btn shrink-0 bg-rose-100 group-hover:bg-rose-500 group-hover:text-white text-rose-700 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition flex items-center gap-2">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Claim Promise</span>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE MOOD BOOSTER / DOUBT ERASER -->
+    <section id="booster" class="relative z-10 py-16 px-4 max-w-3xl mx-auto">
+        <div class="bg-gradient-to-br from-rose-500 via-rose-600 to-pink-600 rounded-3xl p-8 sm:p-12 text-white text-center shadow-2xl relative overflow-hidden">
+            <!-- Decorative background circles -->
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-white/10 rounded-full pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-48 h-48 bg-white/10 rounded-full pointer-events-none"></div>
+
+            <span class="inline-block bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-3">
+                Emergency Reassurance Box
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3">Whenever You Feel Doubt...</h2>
+            <p class="text-rose-100 text-sm sm:text-base max-w-lg mx-auto mb-8">
+                Whenever you feel like you annoy me, feel jealous, or wonder how I feel about you, tap the button below for an instant reminder from your baby boy.
+            </p>
+
+            <!-- Message Display Card -->
+            <div id="booster-box" class="bg-white text-slate-800 rounded-2xl p-6 sm:p-8 shadow-inner min-h-[140px] flex flex-col items-center justify-center mb-8 transition-all duration-300 transform">
+                <i id="booster-icon" class="fa-solid fa-envelope-open-text text-3xl text-rose-500 mb-3"></i>
+                <p id="booster-text" class="font-serif text-lg sm:text-xl font-medium text-rose-900 leading-relaxed">
+                    "My eyes are only on you, babe. You never have to feel jealous of anyone!"
+                </p>
+                <span id="booster-count" class="text-[11px] text-slate-400 mt-3 font-medium">Reminder 1 of 7</span>
+            </div>
+
+            <button onclick="nextReassurance()" class="bg-white text-rose-600 hover:bg-rose-50 font-bold px-8 py-4 rounded-full shadow-lg transform transition active:scale-95 inline-flex items-center gap-2.5 text-sm sm:text-base cursor-pointer">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Tap For Another Reminder</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-10 px-4 text-slate-500 text-xs sm:text-sm">
+        <p class="font-serif italic text-rose-700 text-base mb-1">"I love you as I did on the 1st day we met..."</p>
+        <p>Made with all my love for our 1 Month Anniversary ❤️</p>
+    </footer>
+
+    <!-- Toast Notification Container (No alert() used) -->
+    <div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex justify-center">
+        <div class="bg-rose-900 text-white px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 border border-rose-700 max-w-sm">
+            <i class="fa-solid fa-heart text-rose-400 animate-ping"></i>
+            <span id="toast-msg" class="text-sm font-medium">Promise locked in forever!</span>
+        </div>
+    </div>
+
+    <script>
+        // 1. Floating Background Hearts Generator
+        function createFloatingHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartSymbols = ['❤️', '💖', '💕', '🌸', '✨'];
+            
+            for (let i = 0; i < 18; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart select-none';
+                heart.innerText = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 16 + 12) + 'px';
+                heart.style.animationDuration = (Math.random() * 8 + 7) + 's';
+                heart.style.animationDelay = (Math.random() * 5) + 's';
+                container.appendChild(heart);
+            }
+        }
+
+        // 2. Burst of Hearts + Smooth Scroll on "Open Your Surprise"
+        function openSurprise() {
+            // Burst hearts from center
+            for (let i = 0; i < 15; i++) {
+                const burst = document.createElement('div');
+                burst.innerText = '❤️';
+                burst.className = 'fixed z-50 pointer-events-none text-2xl transition-all duration-1000 ease-out';
+                burst.style.left = '50%';
+                burst.style.top = '50%';
+                document.body.appendChild(burst);
+
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 180 + 60;
+                const x = Math.cos(angle) * distance;
+                const y = Math.sin(angle) * distance;
+
+                requestAnimationFrame(() => {
+                    burst.style.transform = `translate(${x}px, ${y}px) scale(0.2)`;
+                    burst.style.opacity = '0';
+                });
+
+                setTimeout(() => burst.remove(), 1000);
+            }
+
+            showToast("Happy 1 Month Anniversary, Babe! ❤️");
+
+            // Smooth scroll to story section
+            setTimeout(() => {
+                document.getElementById('story').scrollIntoView({ behavior: 'smooth' });
+            }, 400);
+        }
+
+        // 3. Live Relationship Timer since Oct 16
+        function updateTimer() {
+            // Setting Oct 16 of current year (or most recent Oct 16)
+            const now = new Date();
+            let startYear = now.getFullYear();
+            let startDate = new Date(startYear, 9, 16, 21, 0, 0); // Oct is month 9 (0-indexed), 9:00 PM movie return
+
+            if (now < startDate) {
+                startDate = new Date(startYear - 1, 9, 16, 21, 0, 0);
+            }
+
+            const diff = now - startDate;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        // 4. Claim Promise Coupon Logic
+        function claimPromise(cardEl, title) {
+            const btn = cardEl.querySelector('.claim-btn');
+            if (cardEl.classList.contains('claimed')) {
+                showToast(`"${title}" is already claimed forever! 💕`);
+                return;
+            }
+            cardEl.classList.add('claimed', 'bg-rose-50/95', 'border-rose-500');
+            cardEl.classList.remove('border-dashed');
+            btn.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Claimed Forever ❤️</span>`;
+            btn.className = 'claim-btn shrink-0 bg-rose-600 text-white font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full transition flex items-center gap-2 shadow-sm';
+            
+            showToast(`Promise Locked: ${title} ❤️`);
+        }
+
+        // 5. Mood Booster / Reassurance Messages
+        const reassurances = [
+            {
+                icon: "fa-solid fa-eye",
+                text: "My eyes are only on you, babe. You never have to feel jealous of my female BFF or anyone else!"
+            },
+            {
+                icon: "fa-solid fa-face-kiss-wink-heart",
+                text: "You do NOT annoy me, irritate me, or ruin my mood. I love talking to you every single day."
+            },
+            {
+                icon: "fa-solid fa-crown",
+                text: "Stop calling yourself ugly! To me, you are the most gorgeous girl inside and out, and I'm proud I chose you."
+            },
+            {
+                icon: "fa-solid fa-lock",
+                text: "You said I'm free to break up anytime... well too bad, I'm not going anywhere! You're stuck with me."
+            },
+            {
+                icon: "fa-solid fa-bowl-food",
+                text: "Don't stress about the future—your personal chef has got all your meals covered AND will make sure you take your meds!"
+            },
+            {
+                icon: "fa-solid fa-file-pen",
+                text: "I will never get tired of writing big paragraphs for you or sending you sleepy voice notes after my exams."
+            },
+            {
+                icon: "fa-solid fa-heart-pulse",
+                text: "Thank you for loving me outside of your mom and dad, and thank you for giving us a second chance. I love you so much!"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function nextReassurance() {
+            currentIndex = (currentIndex + 1) % reassurances.length;
+            const box = document.getElementById('booster-box');
+            const textEl = document.getElementById('booster-text');
+            const iconEl = document.getElementById('booster-icon');
+            const countEl = document.getElementById('booster-count');
+
+            // Subtle pop animation
+            box.classList.add('scale-95', 'opacity-80');
+            setTimeout(() => {
+                iconEl.className = `${reassurances[currentIndex].icon} text-3xl text-rose-500 mb-3`;
+                textEl.innerText = `"${reassurances[currentIndex].text}"`;
+                countEl.innerText = `Reminder ${currentIndex + 1} of ${reassurances.length}`;
+                box.classList.remove('scale-95', 'opacity-80');
+            }, 160);
+        }
+
+        // Custom Toast Helper
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const msgEl = document.getElementById('toast-msg');
+            msgEl.innerText = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 3200);
+        }
+
+        // Initialize on Window Load
+        window.onload = function() {
+            createFloatingHearts();
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        };
+    </script>
+</body>
+</html>
